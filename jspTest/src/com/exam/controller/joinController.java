@@ -36,8 +36,6 @@ public class joinController extends HttpServlet {
 		
 		if (joinResult == 1) {
 			req.setAttribute("joinResult", joinResult);
-			HttpSession session = req.getSession();
-			session.setAttribute("sessionID", id);
 			RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 			rd.forward(req, resp);
 		} else {
