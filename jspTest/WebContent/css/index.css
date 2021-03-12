@@ -1,0 +1,47 @@
+#frame{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginBox{
+    width: 10%;
+    height: 300px;
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+    padding: 2% 2% 2% 2%;
+}
+
+#id_wrap{
+    width: 100%;
+    height: 50%;
+}
+
+#signUp{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#loginBtn{
+    background-color: white;
+    border: thin solid red;
+    color: red;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.labels{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.inputs{
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+}
