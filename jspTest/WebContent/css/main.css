@@ -51,3 +51,13 @@ a{
 	border: thin solid red;
 	font-weight: bold;
 }
+
+#boardNumber{
+	width: 10%;
+}
+#boardTitle{
+	width: 70%;
+}
+#boardWriter{
+	width: 20%;
+}
