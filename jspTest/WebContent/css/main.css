@@ -20,14 +20,13 @@ a{
 	align-items: center;
 	padding-top: 1%;
 }
-
 #bodyFrame{
-	background: black;
+	background: white;
 }
 
 #body{
 	padding: 1% 25% 0 25%;
-	color: white;
+	color: black;
 }
 
 .menu{
@@ -60,4 +59,24 @@ a{
 }
 #boardWriter{
 	width: 20%;
+}
+
+#table{
+	text-align: center;
+	width: 100%;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 4px solid black;
+	border-bottom: 4px solid black;
+}
+#boardHeader{
+	background: #aaaaaa;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	height: 50px;
+}
+
+.tableAtag{
+	color: black;
 }

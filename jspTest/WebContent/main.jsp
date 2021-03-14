@@ -25,15 +25,15 @@
 		</div>
 		<div id="bodyFrame">
 			<div id="body">
-				<table style="text-align: center; width: 100%">
-					<tr>
+				<table id="table" >
+					<tr id="boardHeader">
 						<td class="boardNumber">번호</td>
 						<td class="boardTitle">제목</td>
 						<td class="boardWriter">작성자</td>
 					</tr>
 					<tr>
 						<td class="boardNumber">1</td>
-						<td class="boardTitle">TEST</td>
+						<td class="boardTitle"><a href="" class="tableAtag">TEST</a></td>
 						<td class="boardWriter">test</td>
 					</tr>
 				</table>
