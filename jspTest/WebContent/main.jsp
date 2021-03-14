@@ -42,9 +42,9 @@
 						int count = 0;
 						for(bbsDTO b : list)
 						{ %>
-							<tr>
+							<tr class="items">
 								<td class="boardNumber"><%= b.getBbsId() %></td>
-								<td class="boardTitle"><a href="" class="tableAtag"><%= b.getTitle() %></a></td>
+								<td class="boardTitle"><a href="bbsView.do?bbsId=<%=b.getBbsId()%>" class="tableAtag"><%= b.getTitle() %></a></td>
 								<td class="boardWriter"><%= b.getWriter() %></td>
 							</tr>
 							<%

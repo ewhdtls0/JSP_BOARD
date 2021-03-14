@@ -120,7 +120,30 @@ public class bbsDAO {
 			close(con, pstmt, rs);
 		}
 		return list;
+	}
+	
+	public bbsDTO selectById(String bbsId) {
+		bbsDTO bDTO = new bbsDTO();
+		con = getConnect();
+		String sql = "SELECT * FROM bbs WHERE bbsId = ?";
 		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, bbsId);
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				bDTO.setBbsId(rs.getInt("bbsId"));
+				bDTO.setTitle(rs.getString("title"));
+				bDTO.setContent(rs.getString("content"));
+				bDTO.setWriter(rs.getString("writer"));
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(con, pstmt, rs);
+		}
+		return bDTO;
 	}
 	
 }

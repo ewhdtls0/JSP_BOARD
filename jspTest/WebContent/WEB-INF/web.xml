@@ -53,5 +53,14 @@
 	<servlet-mapping>
 		<servlet-name>write</servlet-name>
 		<url-pattern>/write.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>bbsView</servlet-name>
+		<servlet-class>com.exam.controller.bbsViewController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bbsView</servlet-name>
+		<url-pattern>/bbsView.do</url-pattern>
 	</servlet-mapping>	
 </web-app>
