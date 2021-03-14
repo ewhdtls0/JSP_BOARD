@@ -146,4 +146,20 @@ public class bbsDAO {
 		return bDTO;
 	}
 	
+	public int deleteById(int bbsId) {
+		con = getConnect();
+		String sql = "DELETE FROM bbs WHERE bbsId = ?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, bbsId);
+			result = pstmt.executeUpdate();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(con, pstmt, null);
+		}
+		return result;
+	}
+	
 }

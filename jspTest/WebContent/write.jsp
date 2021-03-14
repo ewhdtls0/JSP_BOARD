@@ -12,9 +12,8 @@
 	<div id="frame">
 		<div id="header">
 			&nbsp;&nbsp;&nbsp;
-			<a href=""><img src="img/homelogo.png" width="5%" height="30px"></a>
-			<span class="menu"><a href="">게시판</a></span>
-			<span class="menu"><a href="">마이페이지</a></span>
+			<a href="main.jsp"><img src="img/homelogo.png" width="5%" height="30px"></a>
+			<span class="menu"><a href="main.jsp">게시판</a></span>
 			<span id="isLogin" class="menu">
 				<c:if test="${sessionID != null }">
 					<span style="color: red">${sessionID }</span> 님 환영합니다

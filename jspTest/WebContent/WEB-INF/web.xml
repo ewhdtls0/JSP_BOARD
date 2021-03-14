@@ -62,5 +62,23 @@
 	<servlet-mapping>
 		<servlet-name>bbsView</servlet-name>
 		<url-pattern>/bbsView.do</url-pattern>
-	</servlet-mapping>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>bbsDelete</servlet-name>
+		<servlet-class>com.exam.controller.bbsDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bbsDelete</servlet-name>
+		<url-pattern>/bbsDelete.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>bbsupdate</servlet-name>
+		<servlet-class>com.exam.controller.BbsUpdateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bbsupdate</servlet-name>
+		<url-pattern>/bbsupdate.do</url-pattern>
+	</servlet-mapping>
 </web-app>

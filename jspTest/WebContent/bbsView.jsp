@@ -15,9 +15,8 @@
 	<div id="frame">
 		<div id="header">
 			&nbsp;&nbsp;&nbsp;
-			<a href=""><img src="img/homelogo.png" width="5%" height="30px"></a>
-			<span class="menu"><a href="">게시판</a></span>
-			<span class="menu"><a href="">마이페이지</a></span>
+			<a href="main.jsp"><img src="img/homelogo.png" width="5%" height="30px"></a>
+			<span class="menu"><a href="main.jsp">게시판</a></span>
 			<span id="isLogin" class="menu">
 				<c:if test="${sessionID != null }">
 					<span style="color: red">${sessionID }</span> 님 환영합니다
@@ -36,6 +35,7 @@
 					<div id="contentLabel"><label>내용</label></div>
 					<div id="content"  style="width: 100%; height: 300px; resize: none; overflow: hidden;">${bbsView.content}</div>
 					<span><a href="main.jsp"><button id="cancleBtn" type="button" class="btns">목록</button></a></span>
+					<span><a href="bbsDelete.do?bbsId=${bbsView.bbsId }"><button id="deleteBtn" type="button" class="btns">삭제</button></a></span>
 				</div>
 			</div>
 		</div>
