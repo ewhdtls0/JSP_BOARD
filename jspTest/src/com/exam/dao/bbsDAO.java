@@ -162,4 +162,25 @@ public class bbsDAO {
 		return result;
 	}
 	
+	public int update(bbsDTO bDTO) {
+		con = getConnect();
+		StringBuffer query = new StringBuffer();
+		query.append("UPDATE bbs SET title = ?, ");
+		query.append("content = ? ");
+		query.append("WHERE bbsId = ?");
+		
+		try {
+			pstmt = con.prepareStatement(query.toString());
+			pstmt.setString(1, bDTO.getTitle());
+			pstmt.setString(2, bDTO.getContent());
+			pstmt.setInt(3, bDTO.getBbsId());
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(con, pstmt, null);
+		}
+		return result;
+	}
+	
 }

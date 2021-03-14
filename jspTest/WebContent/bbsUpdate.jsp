@@ -27,17 +27,17 @@
 		</div>
 		<div id="bodyFrame">
 			<div id="body">
-				<div id="writeForm">
-					<div id="titleLabel"><label>제목</label></div>
-					<div id="title" style="width: 100%">${bbsView.title }</div>
-					<div id="writerLabel"><label>작성자</label></div>
-					<div id="writer" style="width: 100%">${bbsView.title }</div>
-					<div id="contentLabel"><label>내용</label></div>
-					<div id="content"  style="width: 100%; height: 300px; resize: none; overflow: hidden;">${bbsView.content}</div>
-					<span><a href="main.jsp"><button id="cancleBtn" type="button" class="btns">목록</button></a></span>
-					<span><a href="bbsDelete.do?bbsId=${bbsView.bbsId }"><button id="deleteBtn" type="button" class="btns">삭제</button></a></span>
-					<span><a href="bbsUpdate.do?bbsId=${bbsView.bbsId }"><button id="updateBtn" type="button" class="btns">수정</button></a></span>
-				</div>
+				<form action="bbsUpdate.do" method="post">
+					<div id="writeForm">
+						<input style="display: none" name="bbsId" value="${bbsUpdate.bbsId }">
+						<div id="titleLabel"><label>제목</label></div>
+						<input id="title" name="title" style="width: 100%" value="${bbsUpdate.title }">
+						<div id="contentLabel"><label>내용</label></div>
+						<textarea id="content"  name="content" style="width: 100%; height: 300px; resize: none; overflow: hidden;">${bbsUpdate.content}</textarea>
+						<span><a href="main.jsp"><button id="cancleBtn" type="button" class="btns">목록</button></a></span>
+						<span><button id="updateBtn" type="submit" class="btns">수정</button></span>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

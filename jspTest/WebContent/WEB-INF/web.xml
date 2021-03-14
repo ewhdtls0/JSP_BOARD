@@ -74,11 +74,11 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>bbsupdate</servlet-name>
-		<servlet-class>com.exam.controller.BbsUpdateController</servlet-class>
+		<servlet-name>bbsUpdate</servlet-name>
+		<servlet-class>com.exam.controller.bbsUpdateController</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>bbsupdate</servlet-name>
-		<url-pattern>/bbsupdate.do</url-pattern>
+		<servlet-name>bbsUpdate</servlet-name>
+		<url-pattern>/bbsUpdate.do</url-pattern>
 	</servlet-mapping>
 </web-app>
