@@ -44,5 +44,14 @@
 	<servlet-mapping>
 		<servlet-name>logout</servlet-name>
 		<url-pattern>/logout.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>write</servlet-name>
+		<servlet-class>com.exam.controller.writeController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>write</servlet-name>
+		<url-pattern>/write.do</url-pattern>
 	</servlet-mapping>	
 </web-app>

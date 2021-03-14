@@ -5,8 +5,8 @@
 <html>
 	<head>
 		<meta charset="EUC-KR">
-		<title>BOARD</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<title>게시글 작성</title>
+		<link rel="stylesheet" type="text/css" href="css/write.css">
 	</head>
 <body>
 	<div id="frame">
@@ -25,20 +25,16 @@
 		</div>
 		<div id="bodyFrame">
 			<div id="body">
-				<table id="table" >
-					<tr id="boardHeader">
-						<td class="boardNumber">번호</td>
-						<td class="boardTitle">제목</td>
-						<td class="boardWriter">작성자</td>
-					</tr>
-					<tr>
-						<td class="boardNumber">1</td>
-						<td class="boardTitle"><a href="" class="tableAtag">TEST</a></td>
-						<td class="boardWriter">test</td>
-					</tr>
-				</table>
-				<br>
-				<a href="write.do"><button id="writeBtn">게시글 작성</button></a>
+				<form action="write.do" method="post">
+					<div id="writeForm">
+						<div id="titleLabel"><label>제목</label></div>
+						<input id="title" style="width: 100%" type="text" name="title">
+						<div id="contentLabel"><label>내용</label></div>
+						<textarea id="content" name="content" style="width: 100%; height: 300px; resize: none; overflow: hidden;" cols="50" rows="10"></textarea>
+						<span><button id="writeBtn" type="submit" class="btns">작성</button></span>
+						<span><a href="login.do"><button id="cancleBtn" type="button" class="btns">취소</button></a></span>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
