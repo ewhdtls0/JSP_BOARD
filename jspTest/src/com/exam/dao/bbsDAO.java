@@ -102,7 +102,7 @@ public class bbsDAO {
 		
 		try {
 			con = getConnect();
-			String sql = "SELECT * FROM bbs BY bbsId DESC";
+			String sql = "SELECT * FROM bbs ORDER BY bbsId DESC";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
