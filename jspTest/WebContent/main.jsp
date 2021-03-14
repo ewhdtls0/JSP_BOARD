@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="java.util.List"%>
+<%@page import="com.exam.dto.bbsDTO" %>
+<%@page import="com.exam.dao.bbsDAO" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,6 +12,10 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 <body>
+<%
+	bbsDAO bDAO = bbsDAO.getInstance();
+	List<bbsDTO> list = bDAO.selectList();
+%>
 	<div id="frame">
 		<div id="header">
 			&nbsp;&nbsp;&nbsp;

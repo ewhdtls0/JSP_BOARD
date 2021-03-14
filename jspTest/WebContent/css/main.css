@@ -82,10 +82,12 @@ a{
 }
 
 #writeBtn{
+	cursor: pointer;
 	background: white;
 	color: red;
 	font-size: 18px;
 	font-weight: bold;
 	border: thin solid red;
 	height: 30px;
+	
 }

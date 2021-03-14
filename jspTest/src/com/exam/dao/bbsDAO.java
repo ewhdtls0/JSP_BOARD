@@ -97,4 +97,30 @@ public class bbsDAO {
 		return result;
 	}
 	
+	public List<bbsDTO> selectList(){
+		List<bbsDTO> list = new ArrayList<>();
+		
+		try {
+			con = getConnect();
+			String sql = "SELECT * FROM bbs BY bbsId DESC";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				bbsDTO bbsDTO = new bbsDTO();
+				bbsDTO.setBbsId(rs.getInt("bbsId"));
+				bbsDTO.setTitle(rs.getString("title"));
+				bbsDTO.setContent(rs.getString("content"));
+				bbsDTO.setWriter(rs.getString("writer"));
+				list.add(bbsDTO);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(con, pstmt, rs);
+		}
+		return list;
+		
+	}
+	
 }

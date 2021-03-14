@@ -40,7 +40,7 @@ public class writeController extends HttpServlet {
 		bbsDTO.setWriter(sessionID);
 		
 		int wResult = bDAO.write(bbsDTO);
-		resp.sendRedirect("login.do");
+		resp.sendRedirect("main.jsp");
 	}
 	
 
